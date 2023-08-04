@@ -6,4 +6,9 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
 set(CMAKE_CXX_EXTENSIONS NO)
 
+set(HELLO_COMPILER_WARNINGS_ENABLED YES CACHE BOOL "compiler warnings enabled")
+if(HELLO_COMPILER_WARNINGS_ENABLED)
+  add_compile_options(-Wall -Wpedantic -Werror)
+endif()
+
 add_executable(hello hello.cc)

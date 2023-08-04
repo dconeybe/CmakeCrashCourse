@@ -3,7 +3,12 @@
 
 #include "mylib.h"
 
+#define Q(x) #x
+#define QUOTE(x) Q(x)
+
 int main(int argc, char** argv) {
+  std::cout << "HELLO_BUILD_TYPE=" << QUOTE(HELLO_BUILD_TYPE) << std::endl;
+
   if (argc < 2) {
     std::cerr << "ERROR: two numbers must be specified" << std::endl;
     return 2;

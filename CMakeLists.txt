@@ -19,3 +19,5 @@ endif()
 add_subdirectory(mylib)
 add_executable(hello hello.cc)
 target_link_libraries(hello mylib)
+
+add_compile_definitions("HELLO_BUILD_TYPE=$<CONFIG>")
